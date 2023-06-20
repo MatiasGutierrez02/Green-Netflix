@@ -1,0 +1,49 @@
+.login-logo {
+    width: 25px;
+    margin-top: 10px;
+}
+.main-container {
+    margin: 10px  10px 0
+}
+.inputs-container{
+    margin-top: 35px;
+}
+.singUp-link {
+    font-weight: 300;
+    color: #b3b3b3;
+
+}
+.redirect-link {
+    text-decoration: none;
+    color: #b3b3b3;
+    font-weight: 500;
+}
+.login-input {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    height: 41px;
+    padding: 0;
+    border: 0;
+    border-radius: 5px;
+    background-color: #333;
+    font-size: 1em;
+    color: white;
+}
+.button-login {
+    font-size: 1em;
+    font-weight: 700;
+    padding: 10px;
+    margin-top: 55px;
+    background-color: #006400;
+    border: none;
+    color: #ededed;
+    border-radius: 5px;
+    width: 100%;
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+h4 {
+    margin: 0px 0 215px;
+    font-weight: 100;
+    color: #b3b3b3;
+}

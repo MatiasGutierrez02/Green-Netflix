@@ -1,7 +1,7 @@
 
 .logo-container {
   position: absolute;
-  top: 10px;
+  top: 12px;
   left: 10px;
   z-index: 1;
 }
@@ -59,15 +59,17 @@
   margin-bottom: 0px;
   text-decoration: none;
 }
-button{
+.button-index{
   font-size: 1em;
   font-weight: 700;
   padding: 10px;
-  margin-top: 25px;
   background-color: #006400;
   border: none;
   color: #ededed;
   border-radius: 5px;
   font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
 }
+.register{
+  margin-top: 25px;
 
+}

@@ -1,12 +1,13 @@
 <template>
   <div>
-    
     <div class="header-section">
       <div>
         <div class="logo-container">
+          <nuxt-link to="/">
           <img src="images/logo.svg" class="logo" alt="Logo">
+        </nuxt-link>
         </div>
-        <button class="button login">
+        <button class="button-index login">
           <nuxt-link to="/login" class="link">
             Iniciar Sesion
           </nuxt-link>
@@ -19,8 +20,8 @@
       <div class="text-container">
         <h1>Películas y series para toda la familia y más</h1>
         <p>Disfruta todo nuestro catálogo con toda tu familia. ¿Buscas una pelicula? ¡Seguro la tenemos! Registrate en nuestra pagina y disfruta de miles de peliculas.</p>
-        <button class="button">
-          <nuxt-link to="/singUp" class="link">
+        <button class="button-index register">
+          <nuxt-link to="/singup" class="link">
             Registrarme
           </nuxt-link>
         </button>
