@@ -1,0 +1,73 @@
+
+.logo-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+.login{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  margin: 0;
+}
+.logo{
+  border-radius: 0px;
+  width: 25px;
+}
+.header-section {
+  position: relative;
+  text-align: center;
+}
+
+.image-container {
+  height: 600px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: auto;
+  height: 600px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0px;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0px 0px 30px 10px #000000;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.text-container {
+  position: absolute;
+  top: 30%;
+  color: #FFFFFF;
+}
+.text-container p{
+  margin: 0 50px;
+}
+.link{
+  color: #e5e5e5;
+  margin-bottom: 0px;
+  text-decoration: none;
+}
+button{
+  font-size: 1em;
+  font-weight: 700;
+  padding: 10px;
+  margin-top: 25px;
+  background-color: #006400;
+  border: none;
+  color: #ededed;
+  border-radius: 5px;
+  font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+

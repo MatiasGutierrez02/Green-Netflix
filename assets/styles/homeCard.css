@@ -1,0 +1,25 @@
+.container{
+    margin: 50px 15px 80px;
+}
+.content-container{
+    text-align: center;
+}
+.img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0px 0px 30px 10px #000000;
+    margin: auto;
+    width: 80%;
+}
+img{
+    width: 100%;
+    z-index: -1;
+    border-radius: 20px;
+}
+h2 {
+    font-size: 2rem;
+}
+p {
+    font-size: 1.125rem;
+}
