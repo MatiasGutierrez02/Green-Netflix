@@ -7,12 +7,12 @@
       <h1>Inicia sesión</h1>
 
       <div class="inputs-container">
-        <input type="text" placeholder="Email" class="login-input">
-        <input type="text" placeholder="Contrasña" class="login-input">
+        <input v-model="user.email" type="text" placeholder="Email" class="login-input">
+        <input v-model="user.password" type="text" placeholder="Contrasña" class="login-input">
       </div>
       
 
-      <button class="button-login">
+      <button class="button-login" @click="searchUser">
         Iniciar sesión
       </button>
 
@@ -22,3 +22,29 @@
 </template>
 
 <style scoped src='@/assets/styles/login.css'></style>
+
+<script>
+  import services from '../plugins/services/usersService' 
+  export default {
+    data() {
+      return {
+        user: {}
+      }
+    },
+    methods: {
+      async searchUser() {
+        let user = await services.searchUser(this.user.email);
+        
+        if(user.email == this.user.email && user.password == this.user.password){
+          console.log("Usuario encontrado")
+          this.$router.push("/mainPage")
+
+        }else{
+          console.log("Usuario no encontrado")
+
+        }
+      }
+    }
+
+  }
+</script>
