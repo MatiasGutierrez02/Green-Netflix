@@ -16,6 +16,19 @@
 <script>
 export default {
     name: 'HomeCard',
-    props: ['title', 'body', 'src']
+    props: {
+        title:{
+            type: String,
+            default: ""
+        },
+        body:{
+            type: String,
+            default: ""
+        },
+        src:{
+            type: String,
+            default: ""
+        }
+    }
 }
 </script>

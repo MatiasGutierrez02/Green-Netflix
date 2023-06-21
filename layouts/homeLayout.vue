@@ -1,0 +1,28 @@
+<template>
+    <div class="home-page-container">
+        <Header/>
+        <Nuxt/>
+        <Footer/>
+    </div>
+        
+</template>
+
+<style>
+.home-page-container{
+    background-color: #141414;
+    color: #999;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+</style>
+
+<script>
+import Footer from '../components/Footer.vue'
+import Header from '../components/Header.vue' 
+export default {
+    components: {
+        Footer,
+        Header
+    }
+    
+}
+</script>

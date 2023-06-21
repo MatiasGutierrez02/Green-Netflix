@@ -11,6 +11,7 @@
     box-shadow: inset 0px 0px 30px 10px #000000;
     margin: auto;
     width: 80%;
+    position: sticky;
 }
 img{
     width: 100%;

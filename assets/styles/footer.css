@@ -1,5 +1,6 @@
 .footer-container {
     margin: 0 15px;
+    border-top: 1px solid #b3b3b3
 }
 .links-container{
     display: flex;
@@ -17,5 +18,5 @@ ul {
     padding: 0;
 }
 h5 {
-    margin-bottom: 15px;
+    padding-bottom: 25px;
 }

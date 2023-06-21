@@ -1,13 +1,37 @@
 <template>
-    <div>
-        <nuxt-link to="/">
-            <img src="images/logo.svg" class="mainPage-logo" alt="Logo">
-        </nuxt-link>
+    <div class="main-page-container">
+        <MoviesCarrousel
+            title="Star Wars"
+        />
+        <MoviesCarrousel
+            title="Marvel"
+        />
+        <MoviesCarrousel
+            title="Batman"
+        />
+        <MoviesCarrousel
+            title="Harry Potter"
+        />
+        <MoviesCarrousel
+            title="Action"
+        />
+        <MoviesCarrousel
+            title="Horror"
+        />
     </div>
 </template>
 <style>
-.mainPage-logo {
-    width: 25px;
-    margin: 12px 0 0 10px;
+.main-page-container{
+    padding: 0 0 25px 10px;
 }
 </style>
+
+<script>
+  import MoviesCarrousel from '../components/MoviesCarrousel.vue'
+  export default {
+    layout: 'homeLayout',
+    components: {
+        MoviesCarrousel: MoviesCarrousel
+    }
+  }
+</script>
