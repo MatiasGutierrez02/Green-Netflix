@@ -8,23 +8,7 @@
     </div>
 </template>
 
-<style>
-.mainPage-logo {
-    width: 25px;
-    margin: 10px 0 10px 10px;
-}
-.header-logo-container{
-    display: flex;
-    justify-content: space-between;
-    background-color: #090909;
-    margin-bottom: 15px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-}
-</style>
+<style scoped src='@/assets/styles/header.css'></style>
 
 <script>
 import HamburguerMenu from '../components/HamburguerMenu.vue'

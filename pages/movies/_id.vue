@@ -19,53 +19,14 @@
                 <p>Género: <span>{{ this.movieData.Genre }}</span></p>
             </div>
         </div>
-        
-
-
-
         <p class="movie-plot">{{ this.movieData.Plot }}</p>
+
+        <button @click="addMovieToFavList" class="button-fav">Añadir a favoritos</button>
+        <button @click="removeMovieToFavList" class="button-fav">Eliminar de favoritos</button>
     </div>
 </template>
 
-<style>
-.movie-data-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 65px; 
-  margin: 0 20px;
-  font-size: 15px;
-}
-.column {
-    text-align: justify;
-}
-.column p {
-    color: #878787;
-}
-.column span {
-    color: #F3F3F3;
-}
-.movie-info p{
-    color: #AEAEAE;
-}
-.movie-plot {
-    text-align: justify;
-    margin: 20px 20px 50px;
-    font-size: 21px;
-    font-weight: 500;
-    color: #F3F3F3;
-}
-.header-movie-cont {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 0 10px 20px;
-}
-.header-movie-cont h1{
-    color: #F3F3F3;
-}
-</style>
-
+<style scoped src='@/assets/styles/moviePage.css'></style>
 <script>
 import services from '../../plugins/services/moviesService'
 export default {
@@ -79,7 +40,36 @@ export default {
         const imdbID = this.$route.params.id
         const res = await services.searchMovieByImdbID(imdbID)
         this.movieData = res
-        console.log(this.movieData)
+    },
+    methods: {
+        async addMovieToFavList(){            
+            const isFaved = await this.isMovieFaved()
+            if(isFaved){
+                alert("¡La pelicula ya esta seleccionada como favorita!")
+
+            }else{
+                const res = await services.addMovieToFavList(this.movieData)
+                this.$router.push("/favFilms")
+            }
+            
+        },
+        async removeMovieToFavList(){
+            const isFaved = await this.isMovieFaved()
+            if(isFaved){
+                const id = this.$route.query.id
+                const res = await services.removeMovieToFavList(id)
+                this.$router.push("/favFilms")
+
+            }else{
+                alert("¡La pelicula no esta seleccionada como favorita!")
+            }
+            
+        },
+        async isMovieFaved(){
+            const isMovieFaved = await services.isMovieFaved(this.movieData.imdbID);
+            return isMovieFaved
+
+        }
     }
     
 }

@@ -10,7 +10,7 @@ const apiClient = axios.create({
 export default {
     async registerUser(usuario) {
         try {
-            apiClient.post(`/users`, usuario)
+            const res = await apiClient.post(`/users`, usuario)
             console.log("Usuario registrado correctamente.")
 
         } catch( error ) {

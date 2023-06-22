@@ -6,6 +6,13 @@ const apiClient = axios.create({
         'Content-Type': 'application/json'
     }
 })
+const favMoviesApiClient = axios.create({
+    baseURL: 'https://64920dad2f2c7ee6c2c95b2f.mockapi.io/',
+    headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+    }
+})
 
 export default {
     async searchMovieList(title) {
@@ -39,6 +46,48 @@ export default {
         } catch (error) {
             console.error(error);
 
+        }
+    },
+    async addMovieToFavList(movie) {
+        try {
+            const res = await favMoviesApiClient.post(`/moviesFav`, movie)
+            console.log("Pelicula agregada correctamente.")
+
+        } catch( error ) {
+            throw "Error de conexion"
+        }
+    },
+    async removeMovieToFavList(id) {
+        try {
+            const res = await favMoviesApiClient.delete(`/moviesFav/${id}`)
+            console.log("Pelicula eliminada correctamente.")
+
+        } catch( error ) {
+            throw "Error de conexion"
+        }
+    },
+    async getFavListMovies() {
+        try {
+            const moviesList = await favMoviesApiClient.get(`/moviesFav`)
+            return moviesList.data
+
+        } catch( error ) {
+            throw "Error de conexion"
+        }
+    },
+    async isMovieFaved(imdbID) {
+        try {
+            const movieFaved = await favMoviesApiClient.get(`/moviesFav?imdbID=${imdbID}`)
+            if (movieFaved.data.length > 0){
+                return true
+
+            }else{
+                return false
+
+            }
+
+        } catch( error ) {
+            throw "Error de conexion"
         }
     }
     
