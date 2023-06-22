@@ -8,8 +8,7 @@ const apiClient = axios.create({
 })
 
 export default {
-    async searchMovie(title) {
-
+    async searchMovieList(title) {
         try {
             const response = await apiClient.get('http://www.omdbapi.com/', {
                 params: {
@@ -25,5 +24,22 @@ export default {
             console.error(error);
 
         }
+    },
+    async searchMovieByImdbID(id) {
+        try {
+            const response = await apiClient.get('http://www.omdbapi.com/', {
+                params: {
+                    apiKey: '2b062e31',
+                    i: id
+                }
+            });
+            const movieData = response.data;
+            return movieData
+
+        } catch (error) {
+            console.error(error);
+
+        }
     }
+    
 }

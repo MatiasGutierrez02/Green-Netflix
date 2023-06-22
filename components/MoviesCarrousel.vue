@@ -1,16 +1,15 @@
 <template>
     <div>
-        <nuxt-link>
-            <h1 class="header-carrousel">{{ title }}</h1>
-            <div>
-                <ul class="list-container">
-                    <li v-for="item in moviesList" :key="item.imdbID">
+        <h1 class="header-carrousel">{{ title }}</h1>
+        <div>
+            <ul class="list-container">
+                <li v-for="item in moviesList" :key="item.imdbID">
+                    <nuxt-link :to="'/movies/' + item.imdbID" class="link-to-movie">
                         <img :src="item.Poster" alt="Poster" class="movie-image">
-                    </li>
-                </ul>
-            </div>
-        </nuxt-link>
-        
+                    </nuxt-link>
+                </li>
+            </ul>
+        </div>
     </div>
 
 </template>
@@ -30,6 +29,10 @@ li {
     list-style: none;
     margin-right: 5px;
 }
+.link-to-movie {
+    text-decoration: none;
+    color: #999;
+}
 .movie-image {
     width: 129px;
     max-height: 160px;
@@ -41,7 +44,7 @@ li {
 </style>
 
 <script>
-    import services from '../plugins/services/movieService'
+    import services from '../plugins/services/moviesService'
     export default {
         name: 'MoviesCarrousel',
         props: {
@@ -56,7 +59,7 @@ li {
             }
         },
         async created() {
-            const response = await services.searchMovie(this.title)
+            const response = await services.searchMovieList(this.title)
             this.moviesList = response
         },
         methods: {
