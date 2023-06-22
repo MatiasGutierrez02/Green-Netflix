@@ -12,6 +12,7 @@
     background-color: #141414;
     color: #999;
     font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+    padding-top: 85px;
 }
 </style>
 
