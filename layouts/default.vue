@@ -1,9 +1,10 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <div class="default-container">
         <Nuxt/>
         <Footer/>
     </div>
-        
+
 </template>
 
 <style>
@@ -21,9 +22,10 @@
 <script>
 import Footer from '../components/Footer.vue'
 export default {
-    components: {
-        Footer
-    }
-    
+  components: {
+    // eslint-disable-next-line object-shorthand, vue/no-reserved-component-names
+    Footer: Footer
+  }
+
 }
 </script>

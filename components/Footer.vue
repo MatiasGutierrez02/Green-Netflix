@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
   <div class="footer-container">
     <div class="border-top"></div>
@@ -28,7 +29,7 @@
       </ul>
     </div>
     </div>
-   
+
     <h5>Videoclub Argentina</h5>
   </div>
 </template>

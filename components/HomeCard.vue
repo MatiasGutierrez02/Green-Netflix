@@ -4,7 +4,7 @@
             <h2>{{ title }}</h2>
             <p>{{ body }}</p>
         </div>
-        
+
         <div class="img-container">
             <img :src="src"  alt="Imagen">
         </div>
@@ -15,20 +15,20 @@
 
 <script>
 export default {
-    name: 'HomeCard',
-    props: {
-        title:{
-            type: String,
-            default: ""
-        },
-        body:{
-            type: String,
-            default: ""
-        },
-        src:{
-            type: String,
-            default: ""
-        }
+  name: 'HomeCard',
+  props: {
+    title: {
+      type: String,
+      default: ''
+    },
+    body: {
+      type: String,
+      default: ''
+    },
+    src: {
+      type: String,
+      default: ''
     }
+  }
 }
 </script>

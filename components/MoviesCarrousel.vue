@@ -19,38 +19,36 @@
   </div>
 </template>
 
-
 <style scoped src='@/assets/styles/moviesCarrousel.css'></style>
 
 <script>
-    import services from '../plugins/services/moviesService'
-    export default {
-        name: 'MoviesCarrousel',
-        props: {
-            title: {
-                type: String,
-                default: ""
-            }
-        },
-        data() {
-            return {
-               moviesList : []
-            }
-        },
-        async created() {
-            const response = await services.searchMovieList(this.title)
-            this.moviesList = response
-        },
-        methods: {
-            scrollPrev() {
-                const carrousel = this.$refs.carrousel;
-                carrousel.scrollLeft -= carrousel.offsetWidth;
-            },
-            scrollNext() {
-                const carrousel = this.$refs.carrousel;
-                carrousel.scrollLeft += carrousel.offsetWidth;
-            }
-        }
+import services from '../plugins/services/moviesService'
+export default {
+  name: 'MoviesCarrousel',
+  props: {
+    title: {
+      type: String,
+      default: ''
     }
+  },
+  data () {
+    return {
+      moviesList: []
+    }
+  },
+  async created () {
+    const response = await services.searchMovieList(this.title)
+    this.moviesList = response
+  },
+  methods: {
+    scrollPrev () {
+      const carrousel = this.$refs.carrousel
+      carrousel.scrollLeft -= carrousel.offsetWidth
+    },
+    scrollNext () {
+      const carrousel = this.$refs.carrousel
+      carrousel.scrollLeft += carrousel.offsetWidth
+    }
+  }
+}
 </script>
-

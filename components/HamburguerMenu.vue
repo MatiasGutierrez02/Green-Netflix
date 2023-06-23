@@ -1,4 +1,3 @@
-import HamburguerMenu from 'HamburguerMenu.vue';
 <template>
     <div>
         <button :class="['open-menu', visible]"  @click="openMenu">
@@ -12,17 +11,17 @@ import HamburguerMenu from 'HamburguerMenu.vue';
                 <li @click="closeMenu">
                     <nuxt-link class="nav-item" to="/mainPage">
                         Home
-                    </nuxt-link> 
+                    </nuxt-link>
                 </li>
                 <li @click="closeMenu">
                     <nuxt-link class="nav-item" to="/favFilms">
                         Favoritos
-                    </nuxt-link> 
+                    </nuxt-link>
                 </li>
                 <li>
                     <nuxt-link class="nav-item" to="/">
                         Cerrar Sesion
-                    </nuxt-link> 
+                    </nuxt-link>
                 </li>
             </ul>
         </nav>
@@ -31,19 +30,19 @@ import HamburguerMenu from 'HamburguerMenu.vue';
 
 <script>
 export default {
-    data() {
-        return {
-            visible: ''
-        }
-    },
-    methods: {
-        openMenu() {
-            this.visible = 'visible';
-        },
-        closeMenu() {
-            this.visible = '';
-        }
+  data () {
+    return {
+      visible: ''
     }
+  },
+  methods: {
+    openMenu () {
+      this.visible = 'visible'
+    },
+    closeMenu () {
+      this.visible = ''
+    }
+  }
 }
 </script>
 

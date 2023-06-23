@@ -12,14 +12,14 @@
 <script>
 import services from '../plugins/services/moviesService'
 export default {
-    data() {
-        return {
-            moviesFavList: []
-        }
-    },
-    async created() {
-        const moviesList = await services.getFavListMovies()
-        this.moviesFavList = moviesList
+  data () {
+    return {
+      moviesFavList: []
     }
+  },
+  async created () {
+    const moviesList = await services.getFavListMovies()
+    this.moviesFavList = moviesList
+  }
 }
 </script>

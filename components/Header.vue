@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <template>
     <div class="header-logo-container">
          <nuxt-link to="/mainPage">
@@ -13,8 +14,8 @@
 <script>
 import HamburguerMenu from '../components/HamburguerMenu.vue'
 export default {
-    components: {
-        HamburguerMenu
-    }
+  components: {
+    HamburguerMenu
+  }
 }
 </script>

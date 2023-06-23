@@ -13,7 +13,7 @@
           </nuxt-link>
         </button>
       </div>
-      
+
       <div class="image-container">
         <img src="images/background.jpg" alt="Image">
       </div>
@@ -28,25 +28,25 @@
       </div>
     </div>
 
-    <HomeCard 
-      title="Descubri nuestro catálogo" 
+    <HomeCard
+      title="Descubri nuestro catálogo"
       body="Ahora podes descubrir nuestro catálogo desde tu casa."
       src="images/watchFromHome.jpg"
     />
-    <HomeCard 
-      title="Podes entrar desde distintos dispositivos" 
+    <HomeCard
+      title="Podes entrar desde distintos dispositivos"
       body="Podes descubrir premios, rankings y opiniones sobre cualquier pelicula en el dispositivo que quieras."
       src="images/tabletImage.jpg"
     />
-    <HomeCard 
-      title="Descarga tus series y miralas cuando quieras" 
+    <HomeCard
+      title="Descarga tus series y miralas cuando quieras"
       body="Guarda en tu dispositivo tus peliculas favoritas."
       src="images/kids.png"
     />
   </div>
 </template>
 
-<style scoped src='@/assets/styles/index.css'/></style>
+<style scoped src='@/assets/styles/index.css'></style>
 
 <script>
 import HomeCard from '../components/HomeCard.vue'
@@ -54,7 +54,7 @@ export default {
   components: {
     HomeCard: HomeCard
   },
-  head(){
+  head () {
     return {
       title: 'Videclub: Alquiler de peliculas',
       meta: [
@@ -69,6 +69,6 @@ export default {
       }
     }
   }
-  
+
 }
 </script>

@@ -4,7 +4,7 @@
         <Nuxt/>
         <Footer/>
     </div>
-        
+
 </template>
 
 <style>
@@ -19,12 +19,14 @@
 
 <script>
 import Footer from '../components/Footer.vue'
-import Header from '../components/Header.vue' 
+import Header from '../components/Header.vue'
 export default {
-    components: {
-        Footer,
-        Header
-    }
-    
+  components: {
+    // eslint-disable-next-line object-shorthand, vue/no-reserved-component-names
+    Footer: Footer,
+    // eslint-disable-next-line object-shorthand, vue/no-reserved-component-names
+    Header: Header
+  }
+
 }
 </script>
