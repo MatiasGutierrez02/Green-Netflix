@@ -23,11 +23,11 @@
 <style scoped src='@/assets/styles/mainPage.css'></style>
 
 <script>
-  import MoviesCarrousel from '../components/MoviesCarrousel.vue'
-  export default {
-    layout: 'homeLayout',
-    components: {
-        MoviesCarrousel: MoviesCarrousel
-    }
+import MoviesCarrousel from '../components/MoviesCarrousel.vue'
+export default {
+  layout: 'homeLayout',
+  components: {
+    MoviesCarrousel: MoviesCarrousel
   }
+}
 </script>
