@@ -1,6 +1,10 @@
 # videoclub
 
 ## Build Setup
+Clone this repo with this link:
+https://github.com/MatiasGutierrez02/videoclub.git
+
+then...
 
 ```bash
 # install dependencies
