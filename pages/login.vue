@@ -8,7 +8,7 @@
 
       <div class="inputs-container">
         <input v-model="user.email" type="text" placeholder="Email" class="login-input">
-        <input v-model="user.password" type="text" placeholder="Contrasña" class="login-input">
+        <input v-model="user.password" type="password" placeholder="Contrasña" class="login-input">
       </div>
       
 

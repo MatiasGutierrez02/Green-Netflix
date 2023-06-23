@@ -74,3 +74,13 @@
   margin-top: 25px;
 
 }
+.login-link {
+  font-weight: 300;
+  color: #b3b3b3;
+
+}
+.redirect-link {
+  text-decoration: none;
+  color: #b3b3b3;
+  font-weight: 500;
+}

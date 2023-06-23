@@ -11,13 +11,16 @@
         <input v-model="newUser.lastName" type="text" placeholder="Apellido" class="singup-input">
         <input v-model="newUser.birthday" type="text" placeholder="Fecha nacimiento" class="singup-input">
         <input v-model="newUser.email" type="text" placeholder="Email" class="singup-input">
-        <input v-model="newUser.password" type="text" placeholder="Contrasña" class="singup-input">
+        <input v-model="newUser.password" type="password" placeholder="Contrasña" class="singup-input">
       </div>
       
 
       <button class="button-singup" @click="register">
         Registrate
       </button>
+
+      <h3 class="login-link">¿Ya tienes cuenta? <nuxt-link class="redirect-link" to="/login">Inicia Sesión</nuxt-link></h3>
+      <h4>Todos los derechos reservados. Esta pagina es sin uso comercial.</h4>
   </div>
 </template>
 

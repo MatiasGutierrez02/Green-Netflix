@@ -46,3 +46,7 @@ h4 {
     font-weight: 100;
     color: #b3b3b3;
 }
+input::placeholder{
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    padding-left: 8px;
+}

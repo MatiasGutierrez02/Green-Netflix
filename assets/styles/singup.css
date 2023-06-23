@@ -33,7 +33,7 @@
     font-size: 1em;
     font-weight: 700;
     padding: 10px;
-    margin: 55px 0 117px;
+    margin: 55px 0 10px;
     background-color: #006400;
     border: none;
     color: #ededed;
@@ -45,4 +45,13 @@ h4 {
     margin: 0px 0 215px;
     font-weight: 100;
     color: #b3b3b3;
+}
+.login-link {
+    font-weight: 300;
+    color: #b3b3b3;
+
+}
+input::placeholder{
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+    padding-left: 8px;
 }
