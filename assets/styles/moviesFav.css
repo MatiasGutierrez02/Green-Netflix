@@ -1,0 +1,20 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .grid-item img{
+      width: 124px;
+      max-height: 160px;
+  }
+   @media (min-width: 1024px) {
+    
+    .grid-item img{
+      width: 300px;
+      min-height: 500px;
+    }
+    .grid-container{
+      grid-template-columns: repeat(5, 1fr);
+    }
+   }

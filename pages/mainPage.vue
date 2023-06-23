@@ -20,11 +20,7 @@
         />
     </div>
 </template>
-<style>
-.main-page-container{
-    padding: 0 0 25px 10px;
-}
-</style>
+<style scoped src='@/assets/styles/mainPage.css'></style>
 
 <script>
   import MoviesCarrousel from '../components/MoviesCarrousel.vue'

@@ -1,47 +1,26 @@
 <template>
-    <div>
-        <h1 class="header-carrousel">{{ title }}</h1>
-        <div>
-            <ul class="list-container">
-                <li v-for="item in moviesList" :key="item.imdbID">
-                    <nuxt-link :to="'/movies/' + item.imdbID" class="link-to-movie">
-                        <img :src="item.Poster" alt="Poster" class="movie-image">
-                    </nuxt-link>
-                </li>
-            </ul>
-        </div>
+  <div>
+    <h1 class="header-carrousel">{{ title }}</h1>
+    <div class="carrousel-container">
+      <ul class="list-container" ref="carrousel">
+        <li v-for="item in moviesList" :key="item.imdbID">
+          <nuxt-link :to="'/movies/' + item.imdbID" class="link-to-movie">
+            <img :src="item.Poster" alt="Poster" class="movie-image">
+          </nuxt-link>
+        </li>
+      </ul>
+      <button class="prev-button" @click="scrollPrev">
+        <img src="images/arrow-left.svg" alt="Fechla desplazamiento izquierda">
+      </button>
+      <button class="next-button" @click="scrollNext">
+        <img src="images/arrow-right.svg" alt="Fechla desplazamiento derecha">
+      </button>
     </div>
-
+  </div>
 </template>
 
-<style>
-.list-container {
-    display: flex;
-    padding: 0;
-    overflow-x: scroll;
-    overflow-y: hidden;
 
-}
-.list-container::-webkit-scrollbar {
-    display: none;
-}
-li {
-    list-style: none;
-    margin-right: 5px;
-}
-.link-to-movie {
-    text-decoration: none;
-    color: #999;
-}
-.movie-image {
-    width: 129px;
-    max-height: 160px;
-}
-.header-carrousel {
-    margin: 0;
-}
-
-</style>
+<style scoped src='@/assets/styles/moviesCarrousel.css'></style>
 
 <script>
     import services from '../plugins/services/moviesService'
@@ -63,7 +42,14 @@ li {
             this.moviesList = response
         },
         methods: {
-
+            scrollPrev() {
+                const carrousel = this.$refs.carrousel;
+                carrousel.scrollLeft -= carrousel.offsetWidth;
+            },
+            scrollNext() {
+                const carrousel = this.$refs.carrousel;
+                carrousel.scrollLeft += carrousel.offsetWidth;
+            }
         }
     }
 </script>

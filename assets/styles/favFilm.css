@@ -1,0 +1,8 @@
+.favfilm-container{
+    margin: 0px 10px 170px;
+}
+@media (min-width: 1024px) {
+    .favfilm-container{
+        margin: 0px 10px 0 2%;
+    }
+}

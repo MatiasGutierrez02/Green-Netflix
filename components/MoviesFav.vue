@@ -7,18 +7,7 @@
     </div>
   </div>
 </template>
-<style>
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-
-.grid-item img{
-    width: 124px;
-    max-height: 160px;
-}
-</style>
+<style scoped src='@/assets/styles/moviesFav.css'></style>
 
 <script>
 import services from '../plugins/services/moviesService'

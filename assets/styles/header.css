@@ -13,3 +13,8 @@
     width: 100%;
     z-index: 999;
 }
+@media (min-width: 1024px) {
+    .mainPage-logo{
+        margin: 50% 100%;
+    }
+}

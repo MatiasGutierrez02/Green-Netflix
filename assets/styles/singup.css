@@ -51,7 +51,26 @@ h4 {
     color: #b3b3b3;
 
 }
-input::placeholder{
+input::placeholder, input:valid{
     font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
     padding-left: 8px;
+}
+@media (min-width: 1024px) {
+    .login-logo {
+        position: absolute;
+        top: 2.5%;
+        left: 4%;
+    }
+    .main-container {
+        padding: 0;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        height: 500px;
+        margin: 0 auto 11%;
+    }
+    .button-singup, .inputs-container{
+        width: 70%;
+    }
 }

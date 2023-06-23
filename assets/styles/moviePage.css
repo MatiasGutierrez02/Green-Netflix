@@ -1,4 +1,4 @@
-.movie-data-container {
+.movie-data {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 65px; 
@@ -15,7 +15,7 @@
       color: #F3F3F3;
   }
   .movie-info p{
-      color: #AEAEAE;
+      color: #878787;
   }
   .movie-plot {
       text-align: justify;
@@ -47,4 +47,29 @@
     color: #ededed;
     border-radius: 5px;
     font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+  }
+  @media (min-width: 1024px) {
+    .movie-data-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Agregar esta línea */
+        margin: 0 20px;
+        font-size: 15px;
+      }
+      .movie-plot {
+        width: 760px;
+      }
+      .movie-data {
+        display: block;
+      }
+      .button-fav{
+        width: 10%;
+        margin: 0 20px;
+      }
+      .buttons-container{
+        display: flex;
+        justify-content: center;
+        
+      }
   }

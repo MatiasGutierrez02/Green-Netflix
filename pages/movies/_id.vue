@@ -5,13 +5,13 @@
             <img :src="this.movieData.Poster" alt="Movie Poster">
         </div>
         
-        
         <div class="movie-data-container">
+            <div class="movie-data">
             <div class="column movie-info">
                 <p>{{ this.movieData.Released + " | " + this.movieData.Runtime }}</p>
                 <p>{{ this.movieData.Rated }}</p>
-                <p>{{ "Metascore: " + this.movieData.Metascore }}</p>
-                <p>{{ "Nominaciones: " + this.movieData.Awards }}</p>
+                <p>Metascore: <span>{{ this.movieData.Metascore }}</span></p>
+                <p>Nominaciones: <span>{{ this.movieData.Awards }}</span></p>
             </div>
             <div class="column">
                 <p>Elenco: <span>{{ this.movieData.Actors }}</span></p>
@@ -20,9 +20,12 @@
             </div>
         </div>
         <p class="movie-plot">{{ this.movieData.Plot }}</p>
-
-        <button @click="addMovieToFavList" class="button-fav">Añadir a favoritos</button>
-        <button @click="removeMovieToFavList" class="button-fav">Eliminar de favoritos</button>
+        </div>
+        
+        <div class="buttons-container">
+            <button @click="addMovieToFavList" class="button-fav">Añadir a favoritos</button>
+            <button @click="removeMovieToFavList" class="button-fav">Eliminar de favoritos</button>
+        </div>
     </div>
 </template>
 

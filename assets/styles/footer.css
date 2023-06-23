@@ -1,7 +1,11 @@
 .footer-container {
-    margin: 0 15px;
-    border-top: 1px solid #b3b3b3
+    margin: 0 15px; 
 }
+.border-top {
+    width: 100%;
+    border-top: 1px solid #b3b3b3;
+    margin-bottom: 20px;
+  }
 .links-container{
     display: flex;
     justify-content: space-between;
@@ -19,4 +23,29 @@ ul {
 }
 h5 {
     padding-bottom: 25px;
+}
+@media (min-width: 1024px) {
+    .footer-container {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      
+      .border-top {
+        width: 100%;
+        border-top: 1px solid #b3b3b3;
+        margin-bottom: 20px;
+      }
+      .links-container{
+        gap: 100px;
+      }
+      .footer-info-container{
+        width: 800px;
+        text-align: center;
+      }
+      ul{
+        text-align: left;
+      }
 }

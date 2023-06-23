@@ -4,11 +4,7 @@
         <MoviesFav/>
     </div>
 </template>
-<style>
-.favfilm-container{
-    margin: 0px 10px 170px;
-}
-</style>
+<style scoped src='@/assets/styles/favFilm.css'></style>
 <script>
   import MoviesFav from '../components/MoviesFav.vue'
   export default {
